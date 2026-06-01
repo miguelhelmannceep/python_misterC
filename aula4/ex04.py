@@ -1,0 +1,28 @@
+class Sensor:
+    def __init__(self, temperatura):
+        self.__temperatura = 0
+        self.set_temperatura(temperatura)
+
+    def get_temperatura(self):
+        return self.__temperatura
+
+    def set_temperatura(self, temperatura):
+        if -50 <= temperatura <= 150:
+            self.__temperatura = temperatura
+        else:
+            print("Temperatura fora do limite do sensor.")
+
+    def status(self):
+        if -50 <= self.__temperatura <= 80:
+            return "Normal"
+        elif 81 <= self.__temperatura <= 120:
+            return "Alerta"
+        else:
+            return "Critico"
+
+
+temperaturas = [-20, 50, 100, 130]
+
+for temp in temperaturas:
+    sensor = Sensor(temp)
+    print(f"Temperatura: {temp}°C -> {sensor.status()}")
