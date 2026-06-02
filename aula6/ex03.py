@@ -21,10 +21,10 @@ class Quadrado(Forma):
 
 
 formas = [
-    Triangulo(10, 5),
-    Quadrado(4),
-    Triangulo(8, 3),
-    Quadrado(7)
+    Triangulo(12, 6),
+    Quadrado(5),
+    Triangulo(9, 4),
+    Quadrado(8)
 ]
 
 for forma in formas:
