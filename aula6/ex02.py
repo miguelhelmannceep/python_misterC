@@ -3,22 +3,22 @@ class Instrumento:
         print("Som genérico")
 
 
-class Flauta(Instrumento):
+class Violao(Instrumento):
     def tocar(self):
-        print("Tocando flauta: fiu fiu")
+        print("Tocando violão: plim plim")
 
 
-class Tambor(Instrumento):
+class Bateria(Instrumento):
     def tocar(self):
-        print("Tocando tambor: bum bum")
+        print("Tocando bateria: tum tum")
 
 
-class Guitarra(Instrumento):
+class Piano(Instrumento):
     def tocar(self):
-        print("Tocando guitarra: trrim trrim")
+        print("Tocando piano: dó ré mi")
 
 
-instrumentos = [Flauta(), Tambor(), Guitarra()]
+instrumentos = [Violao(), Bateria(), Piano()]
 
 for instrumento in instrumentos:
     instrumento.tocar()
