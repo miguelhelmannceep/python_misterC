@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 produtos = [
-    {"id": 1, "nome": "Camisa Chad", "preco": 12.0}
+    {"id": 1, "nome": "Camiseta Chad", "preco": 500.0}
 ]
 
 @app.route("/produtos", methods=["GET"])
