@@ -1,16 +1,10 @@
-from flask import Flask, jsonify
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/produto")
-def produto():
-    dados = {
-        "id": 1,
-        "nome": "Panela de cuzcuz",
-        "preco": 67.67,
-        "disponivel": True
-    }
-    return jsonify(dados)
+@app.route("/")
+def inicio():
+    return "Miguel Pieri Helmann"
 
 if __name__ == "__main__":
     app.run(debug=True)

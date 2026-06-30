@@ -1,7 +1,16 @@
-@app.route("/produtos/<int:id>")
-def buscar_produto(id):
-    for produto in produtos:
-        if produto["id"] == id:
-            return jsonify(produto)
+from flask import Flask
+from datetime import date
 
-    return jsonify({"erro": "Não achei o seu produto, volte mais tarde ou entre em contato com nosso suporte."}), 404
+app = Flask(__name__)
+
+@app.route("/saudacao")
+def saudacao():
+    return "Bem-vinde à API!"
+
+@app.route("/data")
+def data_hoje():
+    hoje = date.today()
+    return f"Data de hoje: {hoje}"
+
+if __name__ == "__main__":
+    app.run(debug=True)

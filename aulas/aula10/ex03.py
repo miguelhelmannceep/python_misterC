@@ -1,0 +1,21 @@
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+tarefas = []
+
+@app.route("/tarefas", methods=["GET"])
+def listar():
+    return jsonify(tarefas)
+
+@app.route("/tarefas", methods=["POST"])
+def criar():
+    nova = request.get_json()
+
+    if "titulo" not in nova or nova["titulo"] == "":
+        return jsonify({"erro": "O titulo nao pode ser vazio"}), 400
+
+    tarefas.append(nova)
+    return jsonify(nova), 201
+
+app.run(debug=True)

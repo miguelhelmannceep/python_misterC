@@ -1,0 +1,19 @@
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+produtos = [
+    {"id": 1, "nome": "Camiseta Chad", "preco": 500.0}
+]
+
+@app.route("/produtos", methods=["GET"])
+def listar():
+    return jsonify(produtos)
+
+@app.route("/produtos", methods=["POST"])
+def criar():
+    novo = request.get_json()
+    produtos.append(novo)
+    return jsonify(novo), 201
+
+app.run(debug=True)

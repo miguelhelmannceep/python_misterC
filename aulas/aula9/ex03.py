@@ -1,21 +1,7 @@
-from flask import Flask, jsonify, request
+@app.route("/produtos/<int:id>")
+def buscar_produto(id):
+    for produto in produtos:
+        if produto["id"] == id:
+            return jsonify(produto)
 
-app = Flask(__name__)
-
-tarefas = []
-
-@app.route("/tarefas", methods=["GET"])
-def listar():
-    return jsonify(tarefas)
-
-@app.route("/tarefas", methods=["POST"])
-def criar():
-    nova = request.get_json()
-
-    if "titulo" not in nova or nova["titulo"] == "":
-        return jsonify({"erro": "O titulo nao pode ser vazio"}), 400
-
-    tarefas.append(nova)
-    return jsonify(nova), 201
-
-app.run(debug=True)
+    return jsonify({"erro": "Não achei o seu produto, volte mais tarde ou entre em contato com nosso suporte."}), 404
