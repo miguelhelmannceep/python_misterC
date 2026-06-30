@@ -10,7 +10,6 @@ produtos = [
 def listar():
     return jsonify(produtos)
 
-# POST com validação
 @app.route("/produtos", methods=["POST"])
 def criar():
     novo = request.get_json()
