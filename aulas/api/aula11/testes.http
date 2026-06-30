@@ -10,9 +10,6 @@ Content-Type: application/json
     "preco": 6700
 }
 
-###
-
-### Criar produto sem preço (erro)
 POST http://127.0.0.1:5000/produtos
 Content-Type: application/json
 
