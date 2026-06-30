@@ -1,0 +1,23 @@
+### Listar produtos
+GET http://127.0.0.1:5000/produtos
+
+###
+
+### Criar produto
+POST http://127.0.0.1:5000/produtos
+Content-Type: application/json
+
+{
+    "nome": "Iphone 20 Pro Max",
+    "preco": 6700
+}
+
+###
+
+### Criar produto sem preço (erro)
+POST http://127.0.0.1:5000/produtos
+Content-Type: application/json
+
+{
+    "nome": "MP40"
+}
