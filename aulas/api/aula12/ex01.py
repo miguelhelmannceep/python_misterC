@@ -8,6 +8,7 @@ def conectar():
     conexao.row_factory = sqlite3.Row
     return conexao
 
+# Garante que a tabela exista ao iniciar
 def inicializar_banco():
     conexao = conectar()
     conexao.execute("""
