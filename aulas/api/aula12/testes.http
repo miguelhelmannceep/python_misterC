@@ -1,0 +1,64 @@
+POST http://127.0.0.1:5000/produtos
+Content-Type: application/json
+
+{
+    "nome": "Teclado Magnetico",
+    "preco": 549.90
+}
+
+###
+
+GET http://127.0.0.1:5000/produtos
+
+###
+
+PUT http://127.0.0.1:5000/produtos/1
+Content-Type: application/json
+
+{
+    "nome": "Teclado ruim",
+    "preco": 19.00
+}
+
+###
+
+PUT http://127.0.0.1:5000/produtos/999
+Content-Type: application/json
+
+{
+    "nome": "Inexistente",
+    "preco": 0.0
+}
+
+###
+
+DELETE http://127.0.0.1:5000/produtos/1
+
+###
+
+DELETE http://127.0.0.1:5000/produtos/1
+
+POST http://127.0.0.1:5000/tarefas
+Content-Type: application/json
+
+{
+    "titulo": "Estudar rotas PUT e DELETE no Flask"
+}
+
+###
+
+GET http://127.0.0.1:5000/tarefas
+
+###
+
+PUT http://127.0.0.1:5000/tarefas/1
+Content-Type: application/json
+
+{
+    "titulo": "Estudar rotas PUT e DELETE no Flask",
+    "feita": 1
+}
+
+###
+
+DELETE http://127.0.0.1:5000/tarefas/1
