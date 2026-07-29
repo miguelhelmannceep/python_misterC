@@ -24,7 +24,7 @@ def inicializar_banco():
 def listar():
     conexao = conectar()
     cursor = conexao.execute("SELECT * FROM produtos")
-    produtos = [dict(linha) for inline in cursor.fetchall()]
+    produtos = [dict(linha) for linha in cursor.fetchall()]
     conexao.close()
     return jsonify(produtos)
 
