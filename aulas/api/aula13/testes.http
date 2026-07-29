@@ -1,0 +1,27 @@
+### Livros completos (JOIN)
+GET http://127.0.0.1:5000/livros-completo
+
+###
+
+### Livros do autor 1
+GET http://127.0.0.1:5000/autores/1/livros
+
+###
+
+### Livros do autor 2
+GET http://127.0.0.1:5000/autores/2/livros
+
+###
+
+### Buscar por Dom
+GET http://127.0.0.1:5000/livros/busca?titulo=Dom
+
+###
+
+### Buscar por Memórias
+GET http://127.0.0.1:5000/livros/busca?titulo=Memórias
+
+###
+
+### Buscar por Sítio
+GET http://127.0.0.1:5000/livros/busca?titulo=Sítio
